@@ -53,3 +53,32 @@
 
 # Note: Focus on using clear and logical conditional statements to ensure your program functions as expected.
 # Remember: when you accept numerical values, you should make sure you consider how robust your code is.
+temperature=int(input("The machine's temperature in degrees Celsius:"))
+pressure=int(input("The machine's pressure in PSI:"))
+status=int(input("The machine's operational status(1/0):"))
+if temperature > 80:
+    temp_message = "Temperature is too high. Recommend shutting down the machine."
+elif 50 <= temperature <= 80:
+    temp_message = "Temperature is within safe limits."
+else:
+    temp_message = "Machine temperature is low. No action is needed."
+
+if pressure > 100:
+    pressure_message = "High pressure is detected. Recommend maintenance."
+elif 70 <= pressure <= 100:
+    pressure_message = "Pressure is stable."
+else:
+    pressure_message = "Pressure is low. The system is operating normally."
+
+if status == 1:
+    if temperature > 80 or pressure > 100:
+        status_message = "WARNING: Machine is running in unsafe conditions. Recommend shutting it down immediately."
+    else:
+        status_message = "Machine is running normally."
+else:
+    status_message = "Machine is stopped. No immediate action is needed."
+
+print("\n--- Machine Status Report ---")
+print(f"Temperature: {temp_message}")
+print(f"Pressure: {pressure_message}")
+print(f"Operational Status: {status_message}")
