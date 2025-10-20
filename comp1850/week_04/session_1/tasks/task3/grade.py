@@ -33,7 +33,7 @@ def calculate_grade(marks):
               range (greater than 100 or negative)
     """
 
-    return grade
+    return calculate_grade(marks)
 
 
 # Check if the following lines produce the correct output

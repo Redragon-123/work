@@ -20,7 +20,7 @@ def count_occurences(l_strings, target, /):
 
     # Complete your code here
 
-    return count
+    return  count_occurences(l_strings, target)
 
 
 # Write code to call the function and check if 
